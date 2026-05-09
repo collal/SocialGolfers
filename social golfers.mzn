@@ -1,16 +1,16 @@
 %% 1.1 Modellazione
 
-% Variabili: {Gruppi_ij | i ∈ [1, W], j ∈ [1,G]} dove Gruppi_ij è l'insieme di soci del j-esimo gruppo nel i-esimo settimana
+% Variabili: {Gruppi_ij | i ∈ [1, W], j ∈ [1,G]} dove Gruppi_ij è l'insieme dei soci del j-esimo gruppo nel i-esimo settimana
   
 % Domini: ∀i,j, Gruppi_ij ⊂ {1, .., P} 
 
 % Vincoli: 
-  % 1. Un soco può essere in un solo gruppo ogni settimana: 
+  % 1. Un socio può essere in un solo gruppo ogni settimana: 
       % ∀i ∈ [1,W],j1, j2 ∈ [1,G], j1 != j2, Gruppi[i,j1] ∩ Gruppi[i,j2] = {} 
   % 2. Ogni gruppo deve avere lo stesso numero di soci:
       % ∀i ∈ [1,W],j ∈ [1,G], |Gruppi[i,j]| = P / G
   % 3. Ogni coppia di soci gioca nello stesso gruppo al più una volta.
-      % ∀i1, i2 ∈ [1,W], j1, j2 ∈ [1,G], |Gruppi[i1,j1] ∩ Gruppi[i2,j2]| <= 1
+      % ∀i1, i2 ∈ [1,W], i1 != i2,  j1, j2 ∈ [1,G], |Gruppi[i1,j1] ∩ Gruppi[i2,j2]| <= 1
 
 
 %% 1.2 Istanziazione: W = 4, G = 5, P = 20
